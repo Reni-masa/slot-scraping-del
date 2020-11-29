@@ -31,9 +31,10 @@ def slot_main():
                   "プレミアムハナハナ":"https://p-ken.jp/p-kingkankosakaewakamiya/bonus/lot?model_nm=%CC%DF%DA%D0%B1%D1%CA%C5%CA%C5-30&cost=20&ps_div=2&mode="}
 
   for searchNama, searchUrl in search_lists.items():
-
-    DRIVER_PATH = '/Users/sugitamasataka/app/chromedriver/bin/chromedriver'
-    
+    #開発環境path
+    # DRIVER_PATH = '/Users/sugitamasataka/app/chromedriver/bin/chromedriver'
+    #本番環境path
+    DRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
     # ブラウザの起動
     driver = webdriver.Chrome(executable_path=DRIVER_PATH, chrome_options=options)
     driver.get(searchUrl)
