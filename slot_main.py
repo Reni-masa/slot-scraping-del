@@ -59,7 +59,7 @@ def slot_main():
     driver.close()
     driver.quit()
 
-    soup = BeautifulSoup(html, "html.parser").encode("utf-8")
+    soup = BeautifulSoup(html, "html.parser")
 
     # #個別URL全取得
     lists = soup.find_all("a", class_="select_lot_button")
