@@ -24,7 +24,6 @@ options.add_argument('--headless'); # ※ヘッドレスモードを使用する
 
 import time
 import individualScraping
-# import chromedriver_binary
 
 def slot_main():
   search_lists = {"ツインドラゴンハナハナ":"https://p-ken.jp/p-kingkankosakaewakamiya/bonus/lot?model_nm=%C2%B2%DD%C4%DE%D7%BA%DE%DD%CA%C5%CA%C5-30&cost=20&ps_div=2&mode=",
@@ -37,7 +36,6 @@ def slot_main():
     
     # ブラウザの起動
     driver = webdriver.Chrome(executable_path=DRIVER_PATH, chrome_options=options)
-    # driver = webdriver.Chrome(chrome_options=options)
     driver.get(searchUrl)
 
     # #待機
