@@ -32,10 +32,10 @@ def slot_main():
 
   for searchNama, searchUrl in search_lists.items():
     #開発環境path
-    DRIVER_PATH = '/Users/sugitamasataka/app/chromedriver/bin/chromedriver'
+    # DRIVER_PATH = '/Users/sugitamasataka/app/chromedriver/bin/chromedriver'
     #本番環境path
-    # DRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
-    
+    DRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
+
     # ブラウザの起動
     driver = webdriver.Chrome(executable_path=DRIVER_PATH, chrome_options=options)
     driver.get(searchUrl)
