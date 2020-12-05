@@ -37,7 +37,7 @@ def individualScraping(search_url, search_name):
   sql = "SELECT id FROM slot_information WHERE slot_name = {slot_name}".format(slot_name=search_name)
   try:
     # conn.execute(sql, search_name.encode('utf-8'))
-    conn.execute(sql.encode('utf-8'))
+    conn.execute(sql)
     print("①===========")
     slot_id = conn.fetchone() #機種ID取得
     print("②===========")
