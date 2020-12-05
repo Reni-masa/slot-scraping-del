@@ -33,9 +33,10 @@ def individualScraping(search_url, search_name):
     print('MySQL Error: ', ex)
   
   #機種id取得
-  sql = 'SELECT id FROM slot_information WHERE slot_name = ?'
+  sql = "SELECT id FROM slot_information WHERE slot_name = '%s'" % (search_name)
   try:
-    conn.execute(sql, search_name.encode('utf-8'))
+    # conn.execute(sql, search_name.encode('utf-8'))
+    conn.execute(sql)
     print("①===========")
     slot_id = conn.fetchone() #機種ID取得
     print("②===========")
