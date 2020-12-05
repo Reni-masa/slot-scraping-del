@@ -13,8 +13,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
-import sys
-print(sys.getdefaultencoding())
 # Seleniumをあらゆる環境で起動させるChromeオプション
 options = Options()
 options.add_argument('--disable-gpu');

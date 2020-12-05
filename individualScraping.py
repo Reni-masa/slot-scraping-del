@@ -22,7 +22,7 @@ def individualScraping(search_url, search_name):
     DB_NAME = os.getenv('DB_NAME')
     DB_USERNAME = os.getenv('DB_USERNAME')
     DB_PASSWORD = os.getenv('DB_PASSWORD')
-    conn = MySQLdb.connect(user=DB_USERNAME, passwd=DB_PASSWORD, host=DB_HOSTNAME, db=DB_NAME)
+    conn = MySQLdb.connect(user=DB_USERNAME, passwd=DB_PASSWORD, host=DB_HOSTNAME, db=DB_NAME, charset="utf8")
     
     #ローカルDB(本番上げるときコメントアウト)
     # conn = MySQLdb.connect(user='root', passwd='root', host='localhost', db='slot_DB')
@@ -33,13 +33,8 @@ def individualScraping(search_url, search_name):
     print('MySQL Error: ', ex)
   
   #機種id取得
-  # sql = "SELECT id FROM slot_information WHERE slot_name = '%s'" % (search_name)
-  print(search_name)
-  # sql = "SELECT id FROM slot_information WHERE slot_name = {slot_name}".format(slot_name=search_name)
   sql = "SELECT id FROM slot_information WHERE slot_name = '{slot_name}'".format(slot_name=search_name)
   try:
-    # conn.execute(sql, search_name.encode('utf-8'))
-    print(sql)
     conn.execute(sql)
     print("①===========")
     slot_id = conn.fetchone() #機種ID取得
