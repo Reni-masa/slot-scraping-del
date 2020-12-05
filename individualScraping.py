@@ -12,7 +12,6 @@ import registration
 # import pymysql.cursors
 
 def individualScraping(search_url, search_name):
-  print("search_url",search_url)#問題切り分け　todo 削除
   getPage = requests.get(search_url)
   mainsoup = BeautifulSoup(getPage.content, "html.parser")
 
@@ -34,10 +33,12 @@ def individualScraping(search_url, search_name):
     print('MySQL Error: ', ex)
   
   #機種id取得
-  sql = "SELECT id FROM slot_information WHERE slot_name = ?"
+  sql = 'SELECT id FROM slot_information WHERE slot_name = ?'
   try:
-    conn.execute(sql, search_name)
+    conn.execute(sql, search_name.encode('utf-8'))
+    print("①===========")
     slot_id = conn.fetchone() #機種ID取得
+    print("②===========")
     slot_id = slot_id[0]
     print("slot_id：",slot_id) #問題切り分け　todo 削除
   finally:
