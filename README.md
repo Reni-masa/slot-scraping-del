@@ -1,4 +1,4 @@
-# app名:slot-scraping
+# 【slot-scraping】
 
 # 基本機能
 スロットデータの収集をwebスクレイピングを利用して行うツールです。
