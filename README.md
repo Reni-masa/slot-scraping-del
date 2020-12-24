@@ -19,5 +19,6 @@ DB：mysql
 # 構成図
 ![構成図](https://user-images.githubusercontent.com/46840997/103073699-66e80b80-460b-11eb-8566-cd2b3a2cb6ff.PNG)
 
-
+# 今後の展開
+・DBに格納したデータの参照機能は別アプリケーションとして作成。
 
