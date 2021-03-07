@@ -22,3 +22,5 @@ DB：mysql
 # 今後の展開
 ・DBに格納したデータの参照機能は別アプリケーションとして作成。
 >[analyze-to-slot(参照機能)](https://analyze-to-slot.herokuapp.com/slot/)
+<img width="1440" alt="スクリーンショット 2021-03-07 22 46 22" src="https://user-images.githubusercontent.com/46840997/110241993-358aa500-7f97-11eb-850a-defe9ea454b5.png">
+
